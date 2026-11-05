@@ -143,10 +143,23 @@ for custom in st.session_state.custom_companies:
 
 # Filtere ausgeblendete Unternehmen heraus
 active_raw = [c for c in all_raw if c['symbol'] not in st.session_state.excluded_symbols]
-if not active_raw:
-    # Falls alle ausgeblendet wurden, Reset anbieten
+
+# Callbacks für Entfernen & Wiederherstellen
+def remove_selected_companies():
+    chosen = st.session_state.get("remove_multiselect_box", [])
+    if chosen:
+        for sym in chosen:
+            st.session_state.excluded_symbols.add(sym)
+        st.session_state["remove_multiselect_box"] = []
+
+def remove_all_companies():
+    for c in all_raw:
+        st.session_state.excluded_symbols.add(c['symbol'])
+    st.session_state["remove_multiselect_box"] = []
+
+def restore_all_companies():
     st.session_state.excluded_symbols = set()
-    active_raw = list(all_raw)
+    st.session_state["remove_multiselect_box"] = []
 
 # Header Banner
 st.markdown(f"""
@@ -164,7 +177,7 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 # Steuerungsleiste: Hinzufügen, Entfernen & API-Refresh
-col_search, col_remove, col_btn_refresh = st.columns([0.46, 0.38, 0.16])
+col_search, col_remove, col_btn_refresh = st.columns([0.44, 0.40, 0.16])
 
 with col_search:
     new_ticker_input = st.text_input(
@@ -194,16 +207,28 @@ with col_remove:
     # Liste der aktuell aktiven Firmen für das Entfernen-Dropdown
     active_options = [c['symbol'] for c in active_raw]
     symbols_to_remove = st.multiselect(
-        "🗑️ Unternehmen aus Ansicht entfernen (für mehr Übersicht):",
+        "🗑️ Unternehmen aus Ansicht entfernen:",
         options=active_options,
-        format_func=lambda sym: next((f"{c['name']} ({sym})" for c in active_raw if c['symbol'] == sym), sym),
+        key="remove_multiselect_box",
+        format_func=lambda sym: next((f"{c['name']} ({sym})" for c in all_raw if c['symbol'] == sym), sym),
         placeholder="Unternehmen zum Ausblenden wählen..."
     )
-    if symbols_to_remove:
-        if st.button(f"❌ {len(symbols_to_remove)} ausgewählte entfernen", use_container_width=True):
-            for s in symbols_to_remove:
-                st.session_state.excluded_symbols.add(s)
-            st.rerun()
+    col_rm_sel, col_rm_all = st.columns([1, 1])
+    with col_rm_sel:
+        st.button(
+            f"❌ Ausgewählte ({len(symbols_to_remove)}) entfernen",
+            on_click=remove_selected_companies,
+            disabled=(len(symbols_to_remove) == 0),
+            use_container_width=True
+        )
+    with col_rm_all:
+        st.button(
+            "🗑️ Alle ausblenden",
+            on_click=remove_all_companies,
+            disabled=(len(active_raw) == 0),
+            use_container_width=True,
+            help="Blendet alle aktuellen Unternehmen auf einmal aus."
+        )
 
 with col_btn_refresh:
     st.markdown("<div style='height: 28px;'></div>", unsafe_allow_html=True)
@@ -215,13 +240,16 @@ with col_btn_refresh:
 
 # Hinweis und Reset-Button, falls Unternehmen ausgeblendet sind
 if len(st.session_state.excluded_symbols) > 0:
-    col_notice, col_reset = st.columns([0.8, 0.2])
+    col_notice, col_reset = st.columns([0.75, 0.25])
     with col_notice:
-        st.info(f"ℹ️ Derzeit sind **{len(st.session_state.excluded_symbols)} Unternehmen** ausgeblendet, um die Ansicht schlanker zu halten.")
+        st.info(f"ℹ️ Derzeit sind **{len(st.session_state.excluded_symbols)} von {len(all_raw)} Unternehmen** ausgeblendet, um die Ansicht schlanker zu halten.")
     with col_reset:
-        if st.button("🔄 Alle wieder einblenden", use_container_width=True):
-            st.session_state.excluded_symbols = set()
-            st.rerun()
+        st.button("🔄 Alle wieder einblenden", on_click=restore_all_companies, use_container_width=True)
+
+# Falls alle Unternehmen ausgeblendet sind, freundlichen Hinweis anzeigen
+if not active_raw:
+    st.warning("⚠️ Derzeit sind alle Unternehmen ausgeblendet. Fügen Sie oben über das Suchfeld ein beliebiges Unternehmen hinzu oder klicken Sie auf **'Alle wieder einblenden'**.")
+    st.stop()
 
 # Berechne Scores & Evaluierung für alle aktiven Unternehmen
 evaluated_list = []
@@ -280,7 +308,7 @@ with k5:
     st.markdown(f"""
     <div class="kpi-tile" style="border-top: 4px solid #2E7D32;">
         <div class="kpi-tile-title">💰 Höchste Dividendenrendite</div>
-        <div class="kpi-tile-val">{best_div['valuation']['dividend_yield']:.1f}%</div>
+        <div class="kpi-tile-val">{best_div['valuation']['dividend_yield']:.2f}%</div>
         <div class="kpi-tile-sub">{best_div['name']} ({best_div['symbol']})</div>
     </div>
     """, unsafe_allow_html=True)
@@ -338,14 +366,24 @@ for c in filtered:
         "Börsenkürzel": c['symbol'],
         "Branche": c['sector'],
         "Score": sc['overall'],
+        # Rentabilitätskennzahlen (Vorlesung 7, Folie 8, 28-31)
         "Eigenkapitalrendite (ROE, %)": p.get('roe'),
+        "Gesamtkapitalrendite (ROA, %)": p.get('roa'),
+        "Reingewinnmarge (ROS, %)": p.get('ros'),
         "EBIT-Marge (%)": p.get('ebit_margin'),
+        "EBITDA-Marge (%)": p.get('ebitda_margin'),
         "Rendite d. eingesetzten Kapitals (ROIC, %)": p.get('roic'),
+        # Sicherheitskennzahlen (Vorlesung 7, Folie 8, 22-26)
         "Eigenkapitalquote (%)": s.get('equity_ratio'),
         "Verschuldungsgrad (Debt/Equity, %)": s.get('debt_to_equity'),
         "Nettoverschuldung / EBITDA": s.get('net_debt_ebitda'),
+        "Anlagedeckungsgrad II (%)": s.get('asset_coverage_2'),
+        # Liquiditätskennzahlen (Vorlesung 7, Folie 8, 13-20)
+        "Liquiditätsgrad I (Cash Ratio, %)": l.get('cash_ratio'),
+        "Liquiditätsgrad II (Quick Ratio, %)": l.get('quick_ratio'),
         "Liquiditätsgrad III (Current Ratio, %)": l.get('current_ratio'),
         "Cashflow-Verhältnis (%)": l.get('cashflow_ratio'),
+        # Bewertung & Markt (Wealth Management)
         "Kurs-Gewinn-Verhältnis (KGV)": v.get('pe_trailing'),
         "Dividendenrendite (%)": v.get('dividend_yield'),
         "Anlegerprofil": prof['type']
@@ -357,32 +395,125 @@ df_all = df_all.sort_values(by="Score", ascending=False).reset_index(drop=True)
 format_dict = {
     "Score": "{:.1f}",
     "Eigenkapitalrendite (ROE, %)": "{:.1f}%",
+    "Gesamtkapitalrendite (ROA, %)": "{:.1f}%",
+    "Reingewinnmarge (ROS, %)": "{:.1f}%",
     "EBIT-Marge (%)": "{:.1f}%",
+    "EBITDA-Marge (%)": "{:.1f}%",
     "Rendite d. eingesetzten Kapitals (ROIC, %)": "{:.1f}%",
     "Eigenkapitalquote (%)": "{:.1f}%",
     "Verschuldungsgrad (Debt/Equity, %)": "{:.1f}%",
     "Nettoverschuldung / EBITDA": "{:.2f}x",
+    "Anlagedeckungsgrad II (%)": "{:.1f}%",
+    "Liquiditätsgrad I (Cash Ratio, %)": "{:.1f}%",
+    "Liquiditätsgrad II (Quick Ratio, %)": "{:.1f}%",
     "Liquiditätsgrad III (Current Ratio, %)": "{:.1f}%",
     "Cashflow-Verhältnis (%)": "{:.1f}%",
     "Kurs-Gewinn-Verhältnis (KGV)": "{:.1f}x",
     "Dividendenrendite (%)": "{:.2f}%"
 }
 
+ALL_METRIC_COLUMNS = [
+    "Score",
+    "Eigenkapitalrendite (ROE, %)",
+    "Gesamtkapitalrendite (ROA, %)",
+    "Reingewinnmarge (ROS, %)",
+    "EBIT-Marge (%)",
+    "EBITDA-Marge (%)",
+    "Rendite d. eingesetzten Kapitals (ROIC, %)",
+    "Eigenkapitalquote (%)",
+    "Verschuldungsgrad (Debt/Equity, %)",
+    "Nettoverschuldung / EBITDA",
+    "Anlagedeckungsgrad II (%)",
+    "Liquiditätsgrad I (Cash Ratio, %)",
+    "Liquiditätsgrad II (Quick Ratio, %)",
+    "Liquiditätsgrad III (Current Ratio, %)",
+    "Cashflow-Verhältnis (%)",
+    "Kurs-Gewinn-Verhältnis (KGV)",
+    "Dividendenrendite (%)"
+]
+
+# Spaltenauswahl & Anpassung
+with st.expander("⚙️ Angezeigte Kennzahlen & Spalten auswählen / anpassen", expanded=False):
+    col_kpi_sel, col_kpi_meta = st.columns([3, 1])
+    with col_kpi_sel:
+        selected_metrics = st.multiselect(
+            "Kennzahlen auswählen:",
+            options=ALL_METRIC_COLUMNS,
+            default=ALL_METRIC_COLUMNS,
+            help="Hier können beliebige Kennzahlen durch Klick auf '×' entfernt oder wieder hinzugefügt werden."
+        )
+    with col_kpi_meta:
+        st.write("**Metadaten:**")
+        show_ticker = st.checkbox("Börsenkürzel", value=True)
+        show_sector = st.checkbox("Branche", value=True)
+        show_profile = st.checkbox("Anlegerprofil", value=True)
+
+# Spalten dynamisch zusammenstellen
+active_cols = ["Unternehmen"]
+if show_ticker and "Börsenkürzel" in df_all.columns:
+    active_cols.append("Börsenkürzel")
+if show_sector and "Branche" in df_all.columns:
+    active_cols.append("Branche")
+
+# Ausgewählte Kennzahlen in definierter Reihenfolge anfügen
+for m in ALL_METRIC_COLUMNS:
+    if m in selected_metrics and m in df_all.columns:
+        active_cols.append(m)
+
+if show_profile and "Anlegerprofil" in df_all.columns:
+    active_cols.append("Anlegerprofil")
+
+df_display = df_all[[c for c in active_cols if c in df_all.columns]]
+
+col_tbl_info, col_tbl_toggle = st.columns([3, 1])
+with col_tbl_info:
+    st.write(f"Anzeige von **{len(filtered)} Unternehmen** | **{len(selected_metrics)} von {len(ALL_METRIC_COLUMNS)} Kennzahlen** aktiv:")
+with col_tbl_toggle:
+    show_colors = st.toggle("🎨 Farbcodierung", value=True, help="Farbliche Hervorhebung (Grün = Sehr gut, Rot = Schwach) aktivieren oder deaktivieren")
+
+# Formate & Gradients nur auf aktuell sichtbare Spalten anwenden
+active_format_dict = {k: v for k, v in format_dict.items() if k in df_display.columns}
+styler = df_display.style.format(active_format_dict, na_rep="–")
+
+if show_colors:
+    gradient_specs = [
+        ("Score", "RdYlGn", 45, 90),
+        ("Eigenkapitalrendite (ROE, %)", "RdYlGn", 0, 40),
+        ("Gesamtkapitalrendite (ROA, %)", "RdYlGn", 1, 15),
+        ("Reingewinnmarge (ROS, %)", "RdYlGn", 2, 25),
+        ("EBIT-Marge (%)", "RdYlGn", 2, 30),
+        ("EBITDA-Marge (%)", "RdYlGn", 5, 35),
+        ("Rendite d. eingesetzten Kapitals (ROIC, %)", "RdYlGn", 2, 25),
+        ("Eigenkapitalquote (%)", "RdYlGn", 20, 65),
+        ("Verschuldungsgrad (Debt/Equity, %)", "RdYlGn_r", 20, 180),
+        ("Nettoverschuldung / EBITDA", "RdYlGn_r", 0.0, 3.5),
+        ("Anlagedeckungsgrad II (%)", "RdYlGn", 80, 140),
+        ("Liquiditätsgrad I (Cash Ratio, %)", "RdYlGn", 15, 80),
+        ("Liquiditätsgrad II (Quick Ratio, %)", "RdYlGn", 50, 130),
+        ("Liquiditätsgrad III (Current Ratio, %)", "RdYlGn", 90, 220),
+        ("Cashflow-Verhältnis (%)", "RdYlGn", 20, 120),
+        ("Kurs-Gewinn-Verhältnis (KGV)", "RdYlGn_r", 12, 45),
+        ("Dividendenrendite (%)", "RdYlGn", 0.5, 5.5)
+    ]
+    for col, cmap, vmin, vmax in gradient_specs:
+        if col in df_display.columns:
+            styler = styler.background_gradient(subset=[col], cmap=cmap, vmin=vmin, vmax=vmax)
+
 st.dataframe(
-    df_all.style.format(format_dict, na_rep="–")
-    .background_gradient(subset=["Score"], cmap="Greens")
-    .background_gradient(subset=["Eigenkapitalrendite (ROE, %)"], cmap="Blues")
-    .background_gradient(subset=["Eigenkapitalquote (%)"], cmap="YlGn"),
+    styler,
     use_container_width=True,
     height=480
 )
 
-# Export-Button
-csv_bytes = df_all.to_csv(index=False).encode('utf-8-sig')
+if show_colors:
+    st.caption("🎨 **Farblogik:** 🟢 **Grün** = Sehr gut / Höchste Solidität | 🟡 **Gelb** = Solider Durchschnitt | 🔴 **Rot** = Erhöhter Handlungsbedarf / Risiko. (Hinweis: Bei Kennzahlen wie Verschuldung & KGV bedeutet *niedriger* = grün)")
+
+# Export-Button (exportiert die aktuell ausgewählte Ansicht)
+csv_bytes = df_display.to_csv(index=False).encode('utf-8-sig')
 st.download_button(
-    label="📥 Komplette KPI-Tabelle als CSV für Excel exportieren",
+    label="📥 Aktuelle Tabellenansicht als CSV für Excel exportieren",
     data=csv_bytes,
-    file_name="hsg_kpi_gesamtvergleich.csv",
+    file_name="hsg_kpi_auswahl.csv",
     mime="text/csv"
 )
 
@@ -446,34 +577,71 @@ with col_vis1:
     st.plotly_chart(fig_radar, use_container_width=True)
 
 with col_vis2:
-    st.markdown("#### ⚖️ Rendite vs. Sicherheit (Scatter-Tradeoff)")
-    st.caption("Bläschengröße = Liquiditätsgrad III (Current Ratio), Farbe = Score")
+    st.markdown("#### ⚖️ Trade-Offs des Magischen Dreiecks")
+    
+    tradeoff_mode = st.selectbox(
+        "Spannungsfeld / Trade-Off auswählen:",
+        options=[
+            "⚖️ Rendite vs. Sicherheit (Leverage-Tradeoff)",
+            "💧 Rendite vs. Liquidität (Opportunitätskosten-Tradeoff)",
+            "🛡️ Sicherheit vs. Liquidität (Fristenkongruenz-Tradeoff)"
+        ],
+        index=0
+    )
     
     scatter_data = []
     for c in filtered:
+        roe_val = c['profitability']['roe'] or 0
+        eq_val = c['safety']['equity_ratio'] or 0
+        cr_val = c['liquidity']['current_ratio'] or 100
+        
         scatter_data.append({
             "Unternehmen": f"{c['name']} ({c['symbol']})",
-            "Eigenkapitalrendite (ROE, %)": c['profitability']['roe'] or 0,
-            "Eigenkapitalquote (%)": c['safety']['equity_ratio'] or 0,
-            "Liquiditätsgrad III (%)": min(350, max(50, c['liquidity']['current_ratio'] or 100)),
+            "Eigenkapitalrendite (ROE, %)": roe_val,
+            "Eigenkapitalquote (%)": eq_val,
+            "Liquiditätsgrad III (%)": cr_val,
+            "Bläschen_Liquidität": min(350, max(50, cr_val)),
+            "Bläschen_Eigenkapital": min(100, max(20, eq_val * 1.2)),
+            "Bläschen_Rendite": min(100, max(20, (roe_val if roe_val > 0 else 5) * 1.8)),
             "Score": c['scores']['overall'],
             "Branche": c['sector']
         })
     df_scatter = pd.DataFrame(scatter_data)
     
+    if tradeoff_mode == "⚖️ Rendite vs. Sicherheit (Leverage-Tradeoff)":
+        x_axis = "Eigenkapitalquote (%)"
+        y_axis = "Eigenkapitalrendite (ROE, %)"
+        size_col = "Bläschen_Liquidität"
+        chart_title = "Spannungsfeld Rendite (ROE) vs. Sicherheit (EK-Quote)"
+        st.caption("🔍 **Trade-Off:** Hohe EK-Quote erhöht die Sicherheit, dämpft aber den Leverage-Effekt auf die Eigenkapitalrendite. (Bläschengröße = Liquiditätsgrad III)")
+        
+    elif tradeoff_mode == "💧 Rendite vs. Liquidität (Opportunitätskosten-Tradeoff)":
+        x_axis = "Liquiditätsgrad III (%)"
+        y_axis = "Eigenkapitalrendite (ROE, %)"
+        size_col = "Bläschen_Eigenkapital"
+        chart_title = "Spannungsfeld Rendite (ROE) vs. Liquidität (Current Ratio)"
+        st.caption("🔍 **Trade-Off:** Hohe Barliquidität sichert die Solvenz, bindet aber zinslos Kapital (Opportunitätskosten vs. Reinvestition). (Bläschengröße = EK-Quote)")
+        
+    else: # Sicherheit vs. Liquidität
+        x_axis = "Eigenkapitalquote (%)"
+        y_axis = "Liquiditätsgrad III (%)"
+        size_col = "Bläschen_Rendite"
+        chart_title = "Spannungsfeld Sicherheit (EK-Quote) vs. Liquidität (Current Ratio)"
+        st.caption("🔍 **Trade-Off:** Fristenkongruenz nach der Goldenen Bilanzregel – langfristige Substanz trifft auf kurzfristige Zahlungsbereitschaft. (Bläschengröße = ROE)")
+        
     fig_scatter = px.scatter(
         df_scatter,
-        x="Eigenkapitalquote (%)",
-        y="Eigenkapitalrendite (ROE, %)",
-        size="Liquiditätsgrad III (%)",
+        x=x_axis,
+        y=y_axis,
+        size=size_col,
         color="Score",
         hover_name="Unternehmen",
         text="Unternehmen",
         color_continuous_scale="Viridis",
-        title="Spannungsfeld Rendite (ROE) vs. Sicherheit (Eigenkapitalquote)"
+        title=chart_title
     )
     fig_scatter.update_traces(textposition='top center', textfont=dict(size=9))
-    fig_scatter.update_layout(height=380, margin=dict(l=30, r=30, t=40, b=30))
+    fig_scatter.update_layout(height=360, margin=dict(l=30, r=30, t=35, b=25))
     st.plotly_chart(fig_scatter, use_container_width=True)
 
 st.divider()
@@ -523,7 +691,7 @@ for col_idx, (group_title, comp_list) in enumerate(profiles_grouped.items()):
                     </div>
                     <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: #475569; border-top: 1px solid #f1f5f9; padding-top: 6px;">
                         <span>KGV: <strong>{format_metric_value(val.get('pe_trailing'), 'x')}</strong></span>
-                        <span>Dividendenrendite: <strong>{format_metric_value(val.get('dividend_yield'), '%')}</strong></span>
+                        <span>Dividendenrendite: <strong>{format_metric_value(val.get('dividend_yield'), '%', 2)}</strong></span>
                         <span>Eigenkapitalrendite (ROE): <strong>{format_metric_value(comp['profitability'].get('roe'), '%')}</strong></span>
                     </div>
                 </div>
@@ -556,13 +724,23 @@ for c in filtered:
         )
     })
 df_dp = pd.DataFrame(dupont_data)
+dp_styler = df_dp.style.format({
+    "Eigenkapitalrendite (ROE, %)": "{:.1f}%",
+    "1. Reingewinnmarge (ROS, %)": "{:.1f}%",
+    "2. Kapitalumschlag (CTO, x)": "{:.2f}x",
+    "3. Verschuldungshebel (x)": "{:.2f}x"
+}, na_rep="–")
+
+if show_colors:
+    dp_styler = (
+        dp_styler
+        .background_gradient(subset=["Eigenkapitalrendite (ROE, %)"], cmap="RdYlGn", vmin=0, vmax=40)
+        .background_gradient(subset=["1. Reingewinnmarge (ROS, %)"], cmap="RdYlGn", vmin=0, vmax=25)
+        .background_gradient(subset=["2. Kapitalumschlag (CTO, x)"], cmap="RdYlGn", vmin=0.3, vmax=1.5)
+    )
+
 st.dataframe(
-    df_dp.style.format({
-        "Eigenkapitalrendite (ROE, %)": "{:.1f}%",
-        "1. Reingewinnmarge (ROS, %)": "{:.1f}%",
-        "2. Kapitalumschlag (CTO, x)": "{:.2f}x",
-        "3. Verschuldungshebel (x)": "{:.2f}x"
-    }, na_rep="–"),
+    dp_styler,
     use_container_width=True,
     height=340
 )

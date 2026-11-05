@@ -183,7 +183,18 @@ def fetch_company_data(ticker_symbol: str) -> dict:
     ps_ratio = info.get('priceToSalesTrailing12Months') or ((market_cap / revenue) if market_cap and revenue else None)
     pb_ratio = info.get('priceToBook') or ((market_cap / stockholders_equity) if market_cap and stockholders_equity else None)
     ev_ebitda = info.get('enterpriseToEbitda')
-    dividend_yield = (info.get('dividendYield') * 100) if info.get('dividendYield') else None
+    
+    # Dividendenrendite (in %): Yahoo liefert dividendYield bereits als Prozentwert (z.B. 8.65 für 8.65%)
+    raw_dy = info.get('dividendYield')
+    div_rate = info.get('dividendRate')
+    price = current_price
+    if div_rate and price and price > 0:
+        dividend_yield = round(float(div_rate / price * 100), 2)
+    elif raw_dy is not None:
+        dividend_yield = round(float(raw_dy), 2)
+    else:
+        dividend_yield = None
+        
     payout_ratio = (info.get('payoutRatio') * 100) if info.get('payoutRatio') else None
     beta = info.get('beta')
     fcf_yield = ((free_cash_flow / market_cap) * 100) if (free_cash_flow and market_cap and market_cap > 0) else None
