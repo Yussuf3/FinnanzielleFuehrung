@@ -1,0 +1,777 @@
+=== PAGE 1 ===
+From insight to impact.
+Finanzielle Führung
+Hackathon 
+Herbstsemester 2026
+Dr. Daniel Tinner
+
+=== PAGE 2 ===
+Für den Hackathon werdet Ihr mit 
+Kennzahlen arbeiten, deshalb nun 
+ein kurzer Input, dass Ihr für die 
+Aufgabenstellung gerüstet seid ☺
+
+=== PAGE 3 ===
+Lernziele
+Fachwissen:
+• Studierende können eine Bilanz lesen, verstehen und interpretieren.
+• Studierende können eine Erfolgsrechnung lesen, verstehen und interpretieren.
+• Studierende verstehen Unterschiede zwischen der Erfolgs- und der Geldflussrechnung.
+• Studierende verstehen, weshalb Unternehmen Kapital benötigen und kennen je nach Reifegrad angemessene Quellen für 
+Kapitalbeschaffung.
+• Studierende verstehen das Konzept des Break-Evens und kennen wichtige KPIs für Startups.
+• Studierende verstehen M&A-Transaktionen, kennen Vor- und Nachteile unterschiedlicher Bewertungsmethoden.
+A nwendungswissen:
+• Studierende können eine Erst- und Folgebewertung ausgewählter Bilanzposten durchführen.
+• Studierende können den Free Cashflow sowie den WACC berechnen und interpretieren.
+• Studierende können verschiedene Unternehmensbewertungsmethoden selbstständig durchrechnen.
+T ransferwissen:
+• Studierende verstehen, wie in einem Startup basierend auf Annahmen erster Finanzplan erarbeitet wird.
+• Studierende sind in Lage, Unternehmen anhand von K ennzahlen zu vergleichen und zu beurteilen.
+• Studierende sind in der Lage, das erworbene W issen einzusetzen, um in der Gruppe ein T ool für die Entscheidungsunterstützung 
+zu erarbeiten.
+3Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 4 ===
+Inhalt Vorlesung 7
+1. Grundlagen Performance Measurement
+2. Praxisbeispiel Geberit (Auswirkungen Sanitec-Übernahme)
+− Liquiditätskennzahlen
+− Sicherheitskennzahlen
+− Rentabilitätskennzahlen
+3. Kennzahlensysteme
+4Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 5 ===
+Was ist Performance Measurement?
+• Teilbereich des internen Rechnungswesens, der sich 
+verschiedener Kennzahlen oder Kennzahlensysteme 
+bedient, mit denen sich die Stärken und Schwächen 
+eines Unternehmens quantifizieren lassen.
+• Einfache Kennzahlen werden häufig mit geprüften 
+Daten aus dem externen Rechnungswesen 
+berechnet, Kennzahlensysteme hingegen verlangen 
+üblicherweise externe und interne Daten 
+(insbesondere auch nicht-finanzielle Daten wie die 
+Kundenzufriedenheit, Fehlerquote, etc.).
+• Das Performance Measurement soll zur operativen 
+und strategischen Entscheidungsfähigkeit von 
+Unternehmen beitragen.
+5
+Abbildung der Stärken und Schwächen
+Operative und strategische 
+Entscheidungen
+Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 6 ===
+Vorgehen bei der Abschlussanalyse
+6
+Schritt 1:
+Datenauswahl
+• Konzernabschluss
+• Einzelabschluss
+• Weitere Daten
+Schritt 2:
+A ufbereitung
+• Formelle Prüfung
+• Formelle Bereinigung
+• Anpassung der Gliederung
+Schritt 3:
+A uswahl der Aufbereitungsmethode
+• Zeit-, Unternehmens- und/ oder Branchenvergleich
+• Auswahl Kennzahlen
+Schritt 4:
+A uswertung
+• Kennzahlen
+• Rahmenbedingungen
+Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 7 ===
+Zieldreieck der finanziellen Führung und Kennzahlengruppen
+7
+Rendite
+Risiko LiquiditätKonkurrierendes Verhältnis zueinander
+LiquiditätskennzahlenSicherheitskennzahlen
+Rentabilitätskennzahlen
+Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 8 ===
+Häufig verwendete Kennzahlen
+8
+Liquiditätskennzahlen
+Liquiditätsgrad I (Cash Ratio)
+Liquiditätsgrad II (Quick Ratio)
+Liquiditätsgrad III (Current Ratio)
+Anlageintensität
+Vermögensstruktur
+Debitorenfrist (Days of Sales outstanding)
+Lagerreichweite (Days Inventory Held)
+Lagerumschlag
+Tilgungsdauer / Verschuldungsfaktor
+Umschlagshäufigkeit Debitoren
+Cashflow Ratio
+Cash Burn Ratio
+Cashflow-Analyse
+Free Cashflow (FCF) 
+Eigenfinanzierungsgrad / Eigenkapitalquote
+Selbstfinanzierungsgrad
+Sicherheitskennzahlen
+Anlagedeckungsgrad I
+Anlagedeckungsgrad II
+Debt Equity Ratio
+Gearing
+Kapitalstruktur
+Rentabilitätskennzahlen
+Eigenkapitalrendite (ROE)
+Gesamtkapitalrendite (ROA)
+Reingewinnmarge (ROS)
+Umsatzrentabilität
+EBIT-Marge
+Bruttogewinnmarge
+EBITDA-Marge
+Kapitalrentabilität
+Rentabilität des eingesetzten Kapitals 
+(ROIC)
+Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 9 ===
+Inhalt Vorlesung 7
+1. Grundlagen Performance Measurement
+2. Praxisbeispiel Geberit (Auswirkungen Sanitec-Übernahme)
+− Liquiditätskennzahlen
+− Sicherheitskennzahlen
+− Rentabilitätskennzahlen
+3. Kennzahlensysteme
+9Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 10 ===
+2. Änderungen in der K onzernstruktur (S. 96)
+2015: Akquisition Sanitec Gruppe
+Am 14. Oktober 2014 machte die Geberit AG den Aktionären von Sanitec Oyj, 
+Helsinki, Finnland, (Sanitec) ein Angebot zur Übernahme aller Aktien von Sanitec zu 
+einem Preis von SEK 97 je Aktie in bar. Die Aktien von Sanitec waren an der 
+NASDAQ Stockholm kotiert. Sanitec ist ein führender europäischer Hersteller und 
+Anbieter im Bereich Sanitärkeramik. Im Jahr 2014 erzielte der Konzern einen 
+Nettoumsatz von MEUR 689 und eine EBIT-Marge von 11,4%. Das Unternehmen 
+beschäftigt in 18 Fertigungswerken und 24 Vertriebseinheiten 6 200 Mitarbeitende. 
+Sanitec vertreibt seine Produkte hauptsächlich in Europa unter 14 führenden, lokal 
+stark verankerten Marken. Die Übernahme von Sanitec bedeutet für Geberit eine 
+Erweiterung der Produktpalette. Das Angebot wird um den Bereich Sanitärkeramik 
+ergänzt. Das neue Unternehmen avanciert in Europa zum Marktführer im Bereich 
+Sanitärprodukte und stärkt seine Position insbesondere in jenen europäischen 
+Märkten, in denen Geberit bis anhin noch keine starke Position hatte. Dies sind die 
+nordischen Länder, Frankreich, Grossbritannien und Osteuropa. Es vereint das 
+technische Know-how im Bereich Sanitärtechnik «hinter der Wand» mit der 
+Designkompetenz «vor der Wand». Die Akquisition unterstützt zudem die 
+wesentlichen Umsatz- und Ergebnistreiber der Gruppe.
+
+
+=== PAGE 11 ===
+Ein paar Eckdaten zu Geberit
+• 1874 gegründet, Sitz in Rapperswil-Jona 
+• Rund 12'000 Mitarbeiter in rund 50 Ländern
+• Europäischer Marktführer in der Sanitärtechnik mit globaler Ausrichtung
+• Produktportfolio: Sanitärsysteme, Rohrleitungssysteme, Keramik
+• Seit 1999 an der schweizerischen Börse, seit 2012 im SMI 
+Nettoumsatz 2021: CHF 3.5 Mrd. (+15.9% im Vergleich zu 2020)
+• 2015: Übernahme der finnischen Sanitec Gruppe, Europas führendem Anbieter von 
+Sanitärkeramiken, für rund CHF 1.2 Mrd.
+11
+Im Buchkapitel wird auf alle 
+Kennzahlen am Beispiel Geberit 
+eingegangen, T eil der Vorlesung ist 
+eine Auswahl
+Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 12 ===
+Inhalt Vorlesung 7
+1. Grundlagen Performance Measurement
+2. Praxisbeispiel Geberit (Auswirkungen Sanitec-Übernahme)
+− Liquiditätskennzahlen
+− Sicherheitskennzahlen
+− Rentabilitätskennzahlen
+3. Kennzahlensysteme
+12Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 13 ===
+Häufig verwendete Kennzahlen
+13
+Liquiditätskennzahlen
+Liquiditätsgrad I (Cash Ratio)
+Liquiditätsgrad II (Quick Ratio)
+Liquiditätsgrad III (Current Ratio)
+Anlageintensität
+Vermögensstruktur
+Debitorenfrist (Days of Sales outstanding)
+Lagerreichweite (Days Inventory Held)
+Lagerumschlag
+Tilgungsdauer / Verschuldungsfaktor
+Umschlagshäufigkeit Debitoren
+Cashflow Ratio
+Cash Burn Ratio
+Cashflow-Analyse
+Free Cashflow (FCF) 
+Eigenfinanzierungsgrad / 
+Eigenkapitalquote
+Selbstfinanzierungsgrad
+Sicherheitskennzahlen
+Anlagedeckungsgrad I
+Anlagedeckungsgrad II
+Debt Equity Ratio
+Gearing
+Kapitalstruktur
+Rentabilitätskennzahlen
+Eigenkapitalrendite (ROE)
+Gesamtkapitalrendite (ROA)
+Reingewinnmarge (ROS)
+Umsatzrentabilität
+EBIT-Marge
+Bruttogewinnmarge
+EBITDA-Marge
+Kapitalrentabilität
+Rentabilität des eingesetzten Kapitals 
+(ROIC)
+Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 14 ===
+Liquiditätsgrad III (Current Ratio)
+14
+Logik Berechnung Liquiditätsgrad III
+• Beziehung zwischen kurzfristig verfügbaren 
+Vermögenswerten und kurzfristigen 
+Verbindlichkeiten
+Interpretation
+• Ein Wert von 100% bedeutet, dass kurzfristig fällig werdende Verbindlichkeiten mit den kurzfristig 
+verfügbaren Mitteln und somit rechtzeitig gedeckt werden können.
+• Umwandlung von Lager in Barmittel kann aber einige Zeit beanspruchen (z.B. wird Speiseeis im Winter 
+produziert, kann aber nur im Sommer verkauft werden), d.h. erwarteter Wert liegt üblicherweise wesentlich 
+über 100%.
+• Just-in-Time-Produktion verringert den Lagerbestand, was aber auch bedeutet, dass sich anhäufende Lager, 
+insbesondere in Krisenzeiten, nur schwerlich oder mit hohen Abschlägen verkauft werden können.
+Umlaufvermögen
+Kurzfristiges Fremdkapital
+Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 15 ===
+Geberit: Einfluss Sanitec-Übernahme auf Liquiditätsgrad III 
+15
+Berechnung Liquiditätsgrad III Interpretation
+• Der Liquiditätsgrad III war in der Vergangenheit bei 
+Geberit immer sehr hoch und für ein 
+Industrieunternehmen eher ungewöhnlich.
+• Die Akquisition von Sanitec hat für einen 
+deutlichen Rückgang gesorgt, was auf den massiven 
+Einsatz flüssiger Mittel und den Anstieg des 
+kurzfristigen Fremdkapitals im Rahmen der 
+Transaktion zurückzuführen ist.
+• Mit einem Liquiditätsgrad III von grösser als 100% 
+ist die Fristenkongruenz gegeben.
+Geberit 2015 - Liquiditätsgrad III
+Geberit 2014 - Liquiditätsgrad III
+1'136.6
+= 306.5%
+370.8
+960.8
+= 206.0%
+466.3
+Umlaufvermögen
+Kurzfristiges Fremdkapital
+Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 16 ===
+Warum ist Liquidität so wichtig?
+16
+Langfristig wirkende 
+Gegenmassnahmen
+Mittelfristig wirkende 
+Gegenmassnahmen
+Kurzfristig wirkende 
+Gegenmassnahmen
+Strategiekrise
+Ertrag
+Ergebniskrise
+Entwicklung bis zur Insolvenz
+Liquiditätskrise
+Schwierigkeit der Erkennung
+(Quelle: Müller-Ganz, Turnaround, 2019)Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 17 ===
+A ir Berlin ist insolvent
+15.08.2017
+Air Berlin ist pleite. Mitten in der Ferienzeit hat die zweitgrösste deutsche 
+Fluggesellschaft am Dienstag Insolvenzantrag gestellt. Ihr Grossaktionär und 
+Geldgeber Etihad Airways hatte ihr zuvor den Geldhahn zugedreht.
+Der komplette Flugbetrieb solle mit Hilfe eines 150 Mio. € schweren 
+Überbrückungskredits der Staatsbank KfW weitergehen, erklärten das Wirtschafts- 
+und Verkehrsministerium in Berlin.
+Der Insolvenzantrag beim Amtsgericht Berlin-Charlottenburg ist der vorläufige 
+Schlusspunkt eines jahrelangen Siechtums von Air Berlin. Der notorisch defizitäre 
+Lufthansa-Rivale war von seinem Grossaktionär Etihad immer wieder mit Krediten 
+gestützt worden.
+Insgesamt haben die Araber einen Milliardenbetrag in Air Berlin gesteckt. Die 
+Fluggesellschaft aus Abu Dhabi war 2011 bei Air Berlin eingestiegen und hält nur 
+knapp 30%  an Air Berlin, diese hing damit aber de facto am Tropf von Etihad.
+Der Grossaktionär zog nun die Reissleine: Etihad Airways habe erklärt, «keine 
+weitere finanzielle Unterstützung zur Verfügung zu stellen», teilte der Air-Berlin-
+Vorstand um den ehemaligen Lufthansa-Manager Thomas Winkelmann mit. […]
+
+
+=== PAGE 18 ===
+Beispiel Air Berlin (alle drei Liquiditätsgrade)
+Liquiditätsgrad I Liquiditätsgrad II Liquiditätsgrad III
+2016 = 14.6%
+(220’317) / (1’509’186)
+2015 = 14.7%
+(165’235) / (1‘125‘907)
+2016 = 38.5%
+(220’317+360’030) / (1’509’186) 
+2015 = 49.1%
+(165’235+387’894 ) / (1‘125‘907)
+2016 = 61.2% 
+(924’125) / (1’509’186) 
+2015 = 63.8%
+(718’369) / (1‘125‘907)
+18Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 19 ===
+Cashflow Ratio
+19
+Logik Berechnung Cashflow Ratio
+• Beziehung zwischen Geldfluss und Verschuldung
+Interpretation
+• In welchem Umfang können kurzfristige Verbindlichkeiten durch den Geldfluss aus Geschäftstätigkeit 
+beglichen werden.
+• Im Gegensatz zu den Liquiditätsgraden eine dynamische und keine statische Sicht.
+CF Geschäftstätigkeit 
+Kurzfristige Verbindlichkeiten
+Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 20 ===
+Geberit: Einfluss Sanitec-Übernahme auf Cashflow Ratio
+20
+Berechnung Cashflow Ratio Interpretation
+• Durch den Anstieg der kurzfristigen 
+Verbindlichkeiten ist die Cashflow Ratio gesunken
+• Sämtliche kurzfristigen Verbindlichkeiten können 
+jedoch weiterhin aus dem operativen CF bezahlt 
+werden. Geberit 2015 – Cashflow Ratio
+Geberit 2014 – Cashflow Ratio
+575.5
+= 155.2 %
+370.8
+612.1
+= 131.3%
+466.3
+CF Geschäftstätigkeit 
+Kurzfristige Verbindlichkeiten
+Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 21 ===
+Inhalt Vorlesung 7
+1. Grundlagen Performance Measurement
+2. Praxisbeispiel Geberit (Auswirkungen Sanitec-Übernahme)
+− Liquiditätskennzahlen
+− Sicherheitskennzahlen
+− Rentabilitätskennzahlen
+3. Kennzahlensysteme
+21Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 22 ===
+Häufig verwendete Kennzahlen
+22
+Liquiditätskennzahlen
+Liquiditätsgrad I (Cash Ratio)
+Liquiditätsgrad II (Quick Ratio)
+Liquiditätsgrad III (Current Ratio)
+Anlageintensität
+Vermögensstruktur
+Debitorenfrist (Days of Sales outstanding)
+Lagerreichweite (Days Inventory Held)
+Lagerumschlag
+Tilgungsdauer / Verschuldungsfaktor
+Umschlagshäufigkeit Debitoren
+Cashflow Ratio
+Cash Burn Ratio
+Cashflow-Analyse
+Free Cashflow (FCF) 
+Eigenfinanzierungsgrad / 
+Eigenkapitalquote
+Selbstfinanzierungsgrad
+Sicherheitskennzahlen
+Anlagedeckungsgrad I
+Anlagedeckungsgrad II
+Debt Equity Ratio
+Gearing
+Kapitalstruktur
+Rentabilitätskennzahlen
+Eigenkapitalrendite (ROE)
+Gesamtkapitalrendite (ROA)
+Reingewinnmarge (ROS)
+Umsatzrentabilität
+EBIT-Marge
+Bruttogewinnmarge
+EBITDA-Marge
+Kapitalrentabilität
+Rentabilität des eingesetzten Kapitals 
+(ROIC)
+Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 23 ===
+Eigenkapitalquote (auch Eigenfinanzierungsgrad genannt)
+23
+Logik Berechnung Eigenkapitalquote
+• Anteil des Eigenkapitals am Gesamtkapital, bzw. 
+Anteil des Vermögens, das mit Eigenkapital 
+finanziert ist.
+Interpretation
+• Im Gegensatz zu Fremdkapital, das vollständig zurückgezahlt werden muss, kann Eigenkapital Risiko tragen.
+ Aus Sicherheits-/Stabilitätsgesichtspunkten ist eine möglichst hohe Eigenkapitalquote anzustreben.
+• Aufgrund des höheren Risikos, das EK-Geber tragen, ist EK langfristig teurer als FK.
+ Aus Renditegesichtspunkten ist eine möglichst tiefe Eigenkapitalquote anzustreben.
+• Entscheidung: Risiko der Unternehmung und Risikoaversion der Investoren.
+• Verwandte Grössen: Fremdkapitalquote  (FK / GK); Verschuldungsgrad (FK / EK) = Debt to Equity Ratio.
+Eigenkapital
+Gesamtkapital
+Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 24 ===
+Geberit: Einfluss Sanitec-Übernahme auf EK-Quote
+24
+Berechnung Eigenkapitalquote Interpretation
+• Die Eigenkapitalquote war in der Vergangenheit bei 
+Geberit stets überproportional hoch. 
+• Bei Unternehmen der Grösse von Geberit ist eine 
+Quote von über 50% selten.
+• Da die Akquisition von Sanitec zu grossen T eilen 
+durch die Aufnahme von neuem Fremdkapital 
+finanziert wurde, ist die Eigenkapitalquote von 
+Geberit deutlich gesunken. 
+• Die Finanzierung der Übernahme durch neues 
+Fremdkapital ist aus Rentabilitätssicht sehr sinnvoll.
+• Durch den überaus hohen Eigenfinanzierungsgrad in 
+der Vergangenheit konnte Geberit problemlos 
+frisches Fremdkapital in grossem Umfang 
+aufnehmen.
+Geberit 2015 - Eigenkapitalquote
+Geberit 2014 - Eigenkapitalquote
+1'717.1
+= 70.6 %
+2'431.5
+1'482.2
+= 41.7%
+3'553.8
+Eigenkapital
+Gesamtkapital
+Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 25 ===
+Anlagedeckungsgrad II
+25
+Logik Berechnung Anlagedeckungsgrad II
+• Langfristiges Kapital im Verhältnis zum 
+Anlagevermögen.
+Interpretation
+• Zeigt an, welcher T eil des Anlagevermögens mit langfristigem Kapital finanziert ist.
+• Goldene Finanzierungsregel: Langfristige Vermögensgegenstände (Anlagevermögen) sollen mit langfristigem 
+Kapital finanziert sein (Fristenkongruenz).
+ Gilt unabhängig vom Risiko des Unternehmens und unabhängig von Ländern oder Branchen.
+ Zielwert: mind. 100%!
+• ACHTUNG: Anlagedeckungsgrad II und Liquiditätsgrad III hängen zusammen!
+Eigenkapital + lfr. Fremdkapital
+Anlagevermögen
+Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 26 ===
+Einfluss Sanitec-Übernahme auf Anlagedeckungsgrad II 
+26
+Berechnung Anlagedeckungsgrad II Interpretation
+• Die Fristenkongruenz ist mit einem 
+Anlagedeckungsgrad II von grösser als 100% 
+gegeben. 
+• Der Anlagedeckungsgrad II ist durch den 
+überproportionalen Anstieg des Anlagevermögens 
+im Zuge der Akquisition von Sanitec 
+zurückgegangen. 
+• Der Rückgang des Anlagedeckungsgrads II fiel 
+jedoch nicht allzu stark aus, da die Akquisition 
+grösstenteils durch die Aufnahme von langfristigem 
+Fremdkapital finanziert wurde.
+Geberit 2015 - Anlagedeckungsgrad II 
+Geberit 2014 - Anlagedeckungsgrad II 
+1'717.1 + 343.6
+= 159.1%
+1'294.9
+1'482.2 + 1’605.3
+= 119.1%
+2'593.0
+Eigenkapital + lfr. Fremdkapital
+Anlagevermögen
+Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 27 ===
+Inhalt Vorlesung 7
+1. Grundlagen Performance Measurement
+2. Praxisbeispiel Geberit (Auswirkungen Sanitec-Übernahme)
+− Liquiditätskennzahlen
+− Sicherheitskennzahlen
+− Rentabilitätskennzahlen
+3. Kennzahlensysteme
+27Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 28 ===
+Häufig verwendete Kennzahlen
+28
+Liquiditätskennzahlen
+Liquiditätsgrad I (Cash Ratio)
+Liquiditätsgrad II (Quick Ratio)
+Liquiditätsgrad III (Current Ratio)
+Anlageintensität
+Vermögensstruktur
+Debitorenfrist (Days of Sales outstanding)
+Lagerreichweite (Days Inventory Held)
+Lagerumschlag
+Tilgungsdauer / Verschuldungsfaktor
+Umschlagshäufigkeit Debitoren
+Cashflow Ratio
+Cash Burn Ratio
+Cashflow-Analyse
+Free Cashflow (FCF) 
+Eigenfinanzierungsgrad / 
+Eigenkapitalquote
+Selbstfinanzierungsgrad
+Sicherheitskennzahlen
+Anlagedeckungsgrad I
+Anlagedeckungsgrad II
+Debt Equity Ratio
+Gearing
+Kapitalstruktur
+Rentabilitätskennzahlen
+Eigenkapitalrendite (ROE)
+Gesamtkapitalrendite (ROA)
+Reingewinnmarge (ROS)
+Umsatzrentabilität
+EBIT-Marge
+Bruttogewinnmarge
+EBITDA-Marge
+Kapitalrentabilität
+Rentabilität des eingesetzten Kapitals 
+(ROIC)
+Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 29 ===
+Eigenkapitalrendite
+auch Eigenkapitalrentabilität / Return on Equity (ROE)
+29
+Logik Berechnung Eigenkapitalrendite
+• Reingewinn im Verhältnis zum eingesetzten 
+Eigenkapital.
+Interpretation
+• Fremdkapitalgeber werden mittels Zinszahlung für das zur Verfügung gestellte Kapital entschädigt. Der 
+Jahresgewinn soll mittelfristig die Eigenkapitalgeber für das zur Verfügung gestellte Eigenkapital entschädigen.
+• Die Eigenkapitalrendite sollte wesentlich höher sein als die Fremdkapitalzinsen, um die Aktionäre für das 
+zusätzliche Risiko zu entschädigen, welches das Eigenkapital trägt.
+• Bei relativ kleinem Anteil an Eigenkapital (und hohem Anteil an Fremdkapital) ist die von Investoren 
+erwartete Eigenkapitalrendite entsprechend höher.
+Jahresgewinn
+Ø Eigenkapital
+Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 30 ===
+Einfluss Sanitec-Übernahme auf Eigenkapitalrendite
+30
+Berechnung Eigenkapitalrendite Interpretation
+• Geberit weist mit 26.4% eine sehr gute 
+Eigenkapitalrendite aus.
+• Die hohe Eigenkapitalrendite muss auch im 
+Kontext des tiefen Zinsumfelds (Schweiz und EU) 
+gesehen werden.
+• Einige Jahre lang gab es auf den europäischen 
+Finanzmärkten (insbesondere Schweiz) sogar 
+Negativzinsen. Mittlerweile positive Zinsen, aber 
+könnte auf absehbare Zeit wieder drehen.
+• Aktionäre werden für das zusätzliche Risiko 
+entschädigt, welches das Eigenkapital trägt.
+Geberit 2015 - Eigenkapitalrendite
+Geberit 2014 - Eigenkapitalrendite
+498.6
+= 29.5%
+(1'717.1 + 1'664.1) / 2
+422.4
+= 26.4%
+(1'482.2+1'717.1) / 2
+Jahresgewinn
+Ø Eigenkapital
+Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 31 ===
+Umsatzrendite
+auch Umsatzrentabilität/ Return on Sales (ROS)
+31
+Logik Berechnung
+▪ Gewinngrösse im Verhältnis zum erzielten Umsatz.
+Interpretation Berechnung versch. Umsatzrenditen
+▪ Umsatzrendite setzt das Jahresergebnis ins 
+Verhältnis zu den Nettoumsatzerlösen der 
+Berichtsperiode und bildet damit die Effizienz der 
+gesamten Geschäftstätigkeit ab. 
+▪ Nettoumsatz berechnet sich als Umsatz abzüglich 
+Umsatzminderungen (Rabatte, Skonti, etc.). 
+▪ Die Umsatzrentabilität ist branchenspezifisch und 
+abhängig von der Marktlage (Handelsbetriebe 
+haben meist tiefere ROS als anlageintensive 
+Produktionsbetriebe).
+Gewinngrösse
+Nettoumsatz
+Jahresgewinn
+NettoumsatzReingewinnmarge =  
+EBIT
+NettoumsatzEBIT-Marge =
+EBITDA
+NettoumsatzEBITDA-Marge =  
+Bruttogewinn
+NettoumsatzBruttogewinn -Marge =
+Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 32 ===
+Inhalt Vorlesung 7
+1. Grundlagen Performance Measurement
+2. Praxisbeispiel Geberit (Auswirkungen Sanitec-Übernahme)
+− Liquiditätskennzahlen
+− Sicherheitskennzahlen
+− Rentabilitätskennzahlen
+3. K ennzahlensysteme
+32Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 33 ===
+Hintergrund
+• Kennzahlensysteme sind ein wesentlicher Teil des Performance Measurement und werden auch häufig mit dem 
+englischen Begriff Performance-Measurement-System gleichgesetzt.
+• Eine Kennzahl spiegelt immer nur einen Teilaspekt der Finanz-, Vermögens- oder Ertragslage des Unternehmens 
+wider und sollte nie isoliert betrachtet werden (bspw. EK-Rentabilität in Kombination mit EK-Quote 
+interpretieren).
+• Kennzahlensysteme sollen eine Gesamtsicht auf die finanzielle Lage eines Unternehmens verschaffen, indem sie 
+einzelne Kennzahlen sowie deren Berechnungsgrundlagen in einen systematischen Gesamtzusammenhang 
+stellen.
+• Häufig werden in Kennzahlensystemen externe und interne Daten sowie finanzielle und nicht-finanzielle 
+Daten miteinander kombiniert.
+• Die Systeme können nach Rechen- und Ordnungssystemen aufgeteilt werden:
+− Rechensysteme basieren auf hierarchisch geordneten Kennzahlen, aus denen durch mathematische 
+Umformungen eine Spitzenkennzahl mit hoher Aussagekraft entsteht. 
+− Ordnungssysteme weisen keine Verknüpfung von Rechenoperationen auf, sondern werden sachlogisch 
+strukturiert, womit sich eine Ursache-Wirkungsbeziehung transparent darstellen lässt.
+33Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 34 ===
+DuPont-Schema (ROI-Baum):
+Rechensystem zur Messung der Rentabilität von Unternehmensteilen
+34
+Kapitalrentabilität 
+(ROI)
+Umsatzrentabilität 
+(ROS) 2
+Kapitalumschlag 
+(CTO) 1
+Nettoumsatz
+Umsatz
+Erlösminderungen
+Bruttoerlös
+Herstellkosten
+Vertriebskosten
+Forderungen
+Flüssige Mittel
+Lager
+Sachanlagen
+Finanzanlagen
+Immaterielle Anlagen
+Selbstkosten
+Anlagevermögen
+Umsatz
+Umlaufvermögen
+EBIT
+Verwaltungskosten
+Lagerkosten
+Kapitaleinsatz3
+1CTO = Capital Turn Over
+2ROS = Return on Sales
+3Kapitaleinsatz = Invested Capital (IC)
+Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 35 ===
+Cash Conversion Cycle (CCC):
+Rechensystem zur Messung des W orking Capital Management
+35
+Lagerreichweite in T agen 
+(Days Inventory Held)
+K reditorenfrist in T agen
+(Days of Payables Outstanding)
+Debitorenfrist in T agen
+(Days of Sales Outstanding)
+Cash Conversion Cycle
+Berechnung
+Ø Vorräte
+COGS*
+CCC   =   Lagerreichweite (DIH)     +     Debitorenfrist (DSO)     -     Kreditorenfrist (DPO) 
+Ø Debitorenbestand
+Kreditverkäufe**
+Ø Kreditorenbestand
+COGS*
+x 365 x 365x 365
+Wareneingang
+ Geldeingang
+* Falls keine Daten hierzu vorhanden wird der Warenaufwand verwendet 
+** Falls keine Daten hierzu vorhanden wird der Umsatz verwendet 
+Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 36 ===
+Balanced Score Card (BSC):
+Ordnungssystem zur Messung der Strategieumsetzung
+36
+Potenzialperspektive
+Strategisches 
+Ziel MassnahmenKennzahl Zielwerte
+K undenperspektive
+Strategisches 
+Ziel MassnahmenKennzahl Zielwerte
+Prozessperspektive
+Strategisches 
+Ziel MassnahmenKennzahl Zielwerte
+Finanzperspektive
+Strategisches 
+Ziel MassnahmenKennzahl Zielwerte
+Vision
+und
+Strategie
+Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 37 ===
+Gelernt in Vorlesung 7
+I. Grundlagen und W ichtigkeit des Performance 
+Measurement
+II. Berechnung und Interpretation verschiedener 
+K ennzahlen
+37
+Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 38 ===
+Gelernt in Vorlesung 7
+III. W echselseitige Zusammenhänge von 
+K ennzahlen
+IV. Unternehmenssteuerung mithilfe von 
+K ennzahlensystemen
+38
+Dr. Daniel Tinner | Finanzielle Führung | HS2026
+
+=== PAGE 39 ===
+Aufgabenstellung
+
+=== PAGE 40 ===
+Aufgabenstellung Hackathon 2026
+Entwickelt ein T ool, anhand dessen man Unternehmen mit Kennzahlen vergleichen kann und füttert dieses mit ein 
+paar Unternehmensdaten (Tipp: Yahoo Finance / Bloomberg, APIs). 
+Das Tool soll genutzt werden können, um Unternehmen auszuwählen, und hinsichtlich Ihrer Kennzahlen zu 
+vergleichen. Es könnte beispielsweise einem Wealth Manager dazu dienen, die besten Aktientipps für seine Kunden 
+zu finden, oder Kunden aufzuzeigen, wie sich Unternehmen in Ihren Fundamentaldaten unterscheiden.
+Ich stehe zur Verfügung bei Fragen via Email zur Verfügung.
+Ihr habt 24h Zeit ☺
+40
+
